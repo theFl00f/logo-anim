@@ -1,0 +1,10 @@
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" width="3300" height="4800" viewBox="0 0 3300 4800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <clipPath id="wave1" clipPathUnits="objectBoundingBox"><path d="M0,0.023 C0.113,0.023,0.113,0,0.225,0 s0.113,0.023,0.225,0.023 S0.563,0,0.675,0 s0.113,0.023,0.225,0.023 s0,0.977,0,0.977 L0,1 S-0.113,0.023,0,0.023"></path></clipPath>
+</svg>
