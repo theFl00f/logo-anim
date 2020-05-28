@@ -1,6 +1,6 @@
 .wrapper {
     max-width: 1300px;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 
 }
@@ -27,8 +27,7 @@ svg {
     position: absolute;
     width: 0;
     height: 0;
-    left: -50%;
-    right: -50%;
+
 }
 
 .newContents {
@@ -41,8 +40,11 @@ svg {
     align-items: flex-end;
     opacity: 50%;
     overflow: hidden;
-    clip-path: url('/assets/wave1.svg#wave1');
-    animation: fill 4s ease-out;
+    // clip-path: url('/assets/wave1.svg#wave1');
+    // clip-path: url('/assets/wave1end.svg#wave1end');
+    clip-path: url('/assets/wave1start.svg#wave1start');
+    animation: fill 6s ease-out infinite, 
+    // wave1 1s ease infinite;
 }
 
 @keyframes fill {
@@ -54,4 +56,9 @@ svg {
         height: 100%;
         opacity: 100%;
     }
+}
+
+@keyframes wave1 {
+    from { clip-path: url('/assets/wave1start.svg#wave1end') }
+    to { clip-path: url('/assets/wave1start.svg#wave1start') }
 }

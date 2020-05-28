@@ -223,7 +223,7 @@ textarea {
 
 .wrapper {
   max-width: 1300px;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -247,8 +247,6 @@ svg {
   position: absolute;
   width: 0;
   height: 0;
-  left: -50%;
-  right: -50%;
 }
 
 .newContents {
@@ -267,10 +265,10 @@ svg {
           align-items: flex-end;
   opacity: 50%;
   overflow: hidden;
-  -webkit-clip-path: url("/assets/wave1.svg#wave1");
-          clip-path: url("/assets/wave1.svg#wave1");
-  -webkit-animation: fill 4s ease-out;
-          animation: fill 4s ease-out;
+  -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
+          clip-path: url("/assets/wave1start.svg#wave1start");
+  -webkit-animation: fill 6s ease-out infinite;
+          animation: fill 6s ease-out infinite;
 }
 
 @-webkit-keyframes fill {
@@ -292,5 +290,27 @@ svg {
   to {
     height: 100%;
     opacity: 100%;
+  }
+}
+
+@-webkit-keyframes wave1 {
+  from {
+    -webkit-clip-path: url("/assets/wave1start.svg#wave1end");
+            clip-path: url("/assets/wave1start.svg#wave1end");
+  }
+  to {
+    -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
+            clip-path: url("/assets/wave1start.svg#wave1start");
+  }
+}
+
+@keyframes wave1 {
+  from {
+    -webkit-clip-path: url("/assets/wave1start.svg#wave1end");
+            clip-path: url("/assets/wave1start.svg#wave1end");
+  }
+  to {
+    -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
+            clip-path: url("/assets/wave1start.svg#wave1start");
   }
 }
