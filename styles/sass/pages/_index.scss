@@ -17,18 +17,12 @@ img {
 }
 
 .color {
-    // position: absolute;
+    position: absolute;
     top: 0;
     left: 0;  
     width: 100%;  
 }
 
-svg {
-    position: absolute;
-    width: 0;
-    height: 0;
-
-}
 
 .newContents {
     position: absolute;
@@ -40,12 +34,24 @@ svg {
     align-items: flex-end;
     opacity: 50%;
     overflow: hidden;
+    // background-color: palegreen;
     // clip-path: url('/assets/wave1.svg#wave1');
     // clip-path: url('/assets/wave1end.svg#wave1end');
-    clip-path: url('/assets/wave1start.svg#wave1start');
-    animation: fill 6s ease-out infinite, 
+    // clip-path: url('/assets/wave1start.svg#wave1start');
+    // clip-path: url('/assets/testWave.svg#testWave');
+    animation: fill 6s ease-out infinite;
     // wave1 1s ease infinite;
+    img {
+        position: absolute;
+        top: 250px;
+        left: 26.5%;
+        left: 0;
+        transform: scale(2);
+        animation: wave1 1s linear infinite;
+        overflow: hidden;
+    }
 }
+
 
 @keyframes fill {
     from { 
@@ -59,6 +65,9 @@ svg {
 }
 
 @keyframes wave1 {
-    from { clip-path: url('/assets/wave1start.svg#wave1end') }
-    to { clip-path: url('/assets/wave1start.svg#wave1start') }
+    // from { clip-path: url('/assets/wave1start.svg#wave1end') }
+    // to { clip-path: url('/assets/wave1start.svg#wave1start') }
+    from { left: 0 }
+    to { left: 26.5% }
 }
+

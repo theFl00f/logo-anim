@@ -238,15 +238,10 @@ img {
 }
 
 .color {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-}
-
-svg {
-  position: absolute;
-  width: 0;
-  height: 0;
 }
 
 .newContents {
@@ -265,10 +260,20 @@ svg {
           align-items: flex-end;
   opacity: 50%;
   overflow: hidden;
-  -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
-          clip-path: url("/assets/wave1start.svg#wave1start");
   -webkit-animation: fill 6s ease-out infinite;
           animation: fill 6s ease-out infinite;
+}
+
+.newContents img {
+  position: absolute;
+  top: 250px;
+  left: 26.5%;
+  left: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-animation: wave1 1s linear infinite;
+          animation: wave1 1s linear infinite;
+  overflow: hidden;
 }
 
 @-webkit-keyframes fill {
@@ -295,22 +300,18 @@ svg {
 
 @-webkit-keyframes wave1 {
   from {
-    -webkit-clip-path: url("/assets/wave1start.svg#wave1end");
-            clip-path: url("/assets/wave1start.svg#wave1end");
+    left: 0;
   }
   to {
-    -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
-            clip-path: url("/assets/wave1start.svg#wave1start");
+    left: 26.5%;
   }
 }
 
 @keyframes wave1 {
   from {
-    -webkit-clip-path: url("/assets/wave1start.svg#wave1end");
-            clip-path: url("/assets/wave1start.svg#wave1end");
+    left: 0;
   }
   to {
-    -webkit-clip-path: url("/assets/wave1start.svg#wave1start");
-            clip-path: url("/assets/wave1start.svg#wave1start");
+    left: 26.5%;
   }
 }
