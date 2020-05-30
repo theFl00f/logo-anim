@@ -26,22 +26,36 @@ img {
     padding: 10% 0;
 }
 
+.lineart {
+    position: relative;
+    z-index: 9;
+}
+
 
 .newContents {
     position: absolute;
+    z-index: -9;
     bottom: 0;
     width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    opacity: 50%;
     overflow: hidden;
     mask-image: url('/assets/Shape1copy.png');
     mask-size: 200%;
     mask-position:  right 0% top 0;
-    animation: fill 6s ease-out infinite, wave1 1s linear infinite;
+    animation: fill 10s ease-out infinite, wave1 1.5s linear infinite;
 }
+
+.newContents.insides {
+    opacity: 60%;
+    z-index: -99;
+    mask-image: url('/assets/Shape1copy.png');
+    animation: fill2 10s ease-out infinite, wave2 3s linear infinite;
+
+}
+
 
 #svg {
     position: absolute;
@@ -51,16 +65,24 @@ img {
 @keyframes fill {
     from { 
         height: 0;
-        opacity: 25%;
     }
     to { 
         height: 100%;
-        opacity: 100%;
     }
+}
+
+@keyframes fill2 {
+    from { height: 5% }
+    to { height: 105% }
 }
 
 @keyframes wave1 {
     from { mask-position:  right 0% top 0 }
     to { mask-position:  right 33% top 0 }
+}
+
+@keyframes wave2 {
+    from { mask-position:  right 33% top 0 }
+    to { mask-position:  right 0% top 0 }
 }
 

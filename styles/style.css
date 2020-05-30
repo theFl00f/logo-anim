@@ -247,8 +247,14 @@ img {
   padding: 10% 0;
 }
 
+.lineart {
+  position: relative;
+  z-index: 9;
+}
+
 .newContents {
   position: absolute;
+  z-index: -9;
   bottom: 0;
   width: 100%;
   height: 50%;
@@ -261,7 +267,6 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  opacity: 50%;
   overflow: hidden;
   -webkit-mask-image: url("/assets/Shape1copy.png");
           mask-image: url("/assets/Shape1copy.png");
@@ -269,8 +274,17 @@ img {
           mask-size: 200%;
   -webkit-mask-position: right 0% top 0;
           mask-position: right 0% top 0;
-  -webkit-animation: fill 6s ease-out infinite, wave1 1s linear infinite;
-          animation: fill 6s ease-out infinite, wave1 1s linear infinite;
+  -webkit-animation: fill 10s ease-out infinite, wave1 1.5s linear infinite;
+          animation: fill 10s ease-out infinite, wave1 1.5s linear infinite;
+}
+
+.newContents.insides {
+  opacity: 60%;
+  z-index: -99;
+  -webkit-mask-image: url("/assets/Shape1copy.png");
+          mask-image: url("/assets/Shape1copy.png");
+  -webkit-animation: fill2 10s ease-out infinite, wave2 3s linear infinite;
+          animation: fill2 10s ease-out infinite, wave2 3s linear infinite;
 }
 
 #svg {
@@ -280,22 +294,36 @@ img {
 @-webkit-keyframes fill {
   from {
     height: 0;
-    opacity: 25%;
   }
   to {
     height: 100%;
-    opacity: 100%;
   }
 }
 
 @keyframes fill {
   from {
     height: 0;
-    opacity: 25%;
   }
   to {
     height: 100%;
-    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes fill2 {
+  from {
+    height: 5%;
+  }
+  to {
+    height: 105%;
+  }
+}
+
+@keyframes fill2 {
+  from {
+    height: 5%;
+  }
+  to {
+    height: 105%;
   }
 }
 
@@ -318,5 +346,27 @@ img {
   to {
     -webkit-mask-position: right 33% top 0;
             mask-position: right 33% top 0;
+  }
+}
+
+@-webkit-keyframes wave2 {
+  from {
+    -webkit-mask-position: right 33% top 0;
+            mask-position: right 33% top 0;
+  }
+  to {
+    -webkit-mask-position: right 0% top 0;
+            mask-position: right 0% top 0;
+  }
+}
+
+@keyframes wave2 {
+  from {
+    -webkit-mask-position: right 33% top 0;
+            mask-position: right 33% top 0;
+  }
+  to {
+    -webkit-mask-position: right 0% top 0;
+            mask-position: right 0% top 0;
   }
 }
