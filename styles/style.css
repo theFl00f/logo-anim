@@ -229,7 +229,7 @@ textarea {
 
 img {
   width: 100%;
-  padding: 10%;
+  padding: 20%;
 }
 
 .imgContainer {
@@ -239,9 +239,12 @@ img {
 
 .color {
   position: absolute;
+  bottom: 0;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
+  padding: 10% 0;
 }
 
 .newContents {
@@ -260,20 +263,18 @@ img {
           align-items: flex-end;
   opacity: 50%;
   overflow: hidden;
-  -webkit-animation: fill 6s ease-out infinite;
-          animation: fill 6s ease-out infinite;
+  -webkit-mask-image: url("/assets/Shape1copy.png");
+          mask-image: url("/assets/Shape1copy.png");
+  -webkit-mask-size: 200%;
+          mask-size: 200%;
+  -webkit-mask-position: right 0% top 0;
+          mask-position: right 0% top 0;
+  -webkit-animation: fill 6s ease-out infinite, wave1 1s linear infinite;
+          animation: fill 6s ease-out infinite, wave1 1s linear infinite;
 }
 
-.newContents img {
+#svg {
   position: absolute;
-  top: 250px;
-  left: 26.5%;
-  left: 0;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  -webkit-animation: wave1 1s linear infinite;
-          animation: wave1 1s linear infinite;
-  overflow: hidden;
 }
 
 @-webkit-keyframes fill {
@@ -300,18 +301,22 @@ img {
 
 @-webkit-keyframes wave1 {
   from {
-    left: 0;
+    -webkit-mask-position: right 0% top 0;
+            mask-position: right 0% top 0;
   }
   to {
-    left: 26.5%;
+    -webkit-mask-position: right 33% top 0;
+            mask-position: right 33% top 0;
   }
 }
 
 @keyframes wave1 {
   from {
-    left: 0;
+    -webkit-mask-position: right 0% top 0;
+            mask-position: right 0% top 0;
   }
   to {
-    left: 26.5%;
+    -webkit-mask-position: right 33% top 0;
+            mask-position: right 33% top 0;
   }
 }

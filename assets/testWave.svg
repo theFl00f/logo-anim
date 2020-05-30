@@ -2,12 +2,12 @@
 
 
     
-  <!-- <clipPath id="testWave" clipPathUnits="objectBoundingBox"> -->
+  <clipPath id="testWave" clipPathUnits="objectBoundingBox">
     
     <path 
     d="M0,0C212.5,0,212.5,332,425,332S637.5,0,850,0s212.5,332,425,332S1487.5,0,1700,0s212.5,332,425,332S2334.25,0,2550,0c3.45,0,2,3303,2,3303L0,3300S-0.848,1626.89-.733,663.321c0.015-124.557.046-237.258,0.1-332.956C-0.527,126.666-.328,0,0,0Z">
     </path>
-  <!-- </clipPath> -->
+  </clipPath>
 
 </svg>
 

@@ -8,7 +8,7 @@
 
 img {
     width: 100%;
-    padding: 10%;
+    padding: 20%;
 }
 
 .imgContainer {
@@ -18,9 +18,12 @@ img {
 
 .color {
     position: absolute;
+    bottom: 0;
     top: 0;
-    left: 0;  
+    left: 0;
+    height: 100%;  
     width: 100%;  
+    padding: 10% 0;
 }
 
 
@@ -34,22 +37,14 @@ img {
     align-items: flex-end;
     opacity: 50%;
     overflow: hidden;
-    // background-color: palegreen;
-    // clip-path: url('/assets/wave1.svg#wave1');
-    // clip-path: url('/assets/wave1end.svg#wave1end');
-    // clip-path: url('/assets/wave1start.svg#wave1start');
-    // clip-path: url('/assets/testWave.svg#testWave');
-    animation: fill 6s ease-out infinite;
-    // wave1 1s ease infinite;
-    img {
-        position: absolute;
-        top: 250px;
-        left: 26.5%;
-        left: 0;
-        transform: scale(2);
-        animation: wave1 1s linear infinite;
-        overflow: hidden;
-    }
+    mask-image: url('/assets/Shape1copy.png');
+    mask-size: 200%;
+    mask-position:  right 0% top 0;
+    animation: fill 6s ease-out infinite, wave1 1s linear infinite;
+}
+
+#svg {
+    position: absolute;
 }
 
 
@@ -65,9 +60,7 @@ img {
 }
 
 @keyframes wave1 {
-    // from { clip-path: url('/assets/wave1start.svg#wave1end') }
-    // to { clip-path: url('/assets/wave1start.svg#wave1start') }
-    from { left: 0 }
-    to { left: 26.5% }
+    from { mask-position:  right 0% top 0 }
+    to { mask-position:  right 33% top 0 }
 }
 
